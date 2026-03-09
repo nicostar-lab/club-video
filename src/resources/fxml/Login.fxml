@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="235.0" style="-fx-background-color: #C40C0C;" BorderPane.alignment="CENTER">
+         <children>
+            <Line endX="100.0" layoutX="124.0" layoutY="300.0" startX="-100.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00000059" height="149.0" layoutX="-51.0" layoutY="-10.0" rotate="-49.1" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="148.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00000059" height="88.0" layoutX="31.0" layoutY="140.0" rotate="10.2" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="97.0" />
+            <Label alignment="CENTER" layoutX="3.0" layoutY="279.0" prefHeight="76.0" prefWidth="242.0" text="Connectez-vous pour avoir acces à&#10; notre application" textAlignment="CENTER" textFill="WHITE" />
+            <Label alignment="CENTER" layoutX="-1.0" layoutY="104.0" prefHeight="18.0" prefWidth="250.0" text="Sign In" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="350.0" style="-fx-background-color: #1B211A;" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="emailtextfield" layoutX="61.0" layoutY="127.0" prefHeight="26.0" prefWidth="240.0" promptText="Entrer votre username" style="-fx-border-color: red; -fx-border-radius: 5;" />
+            <Label layoutX="61.0" layoutY="109.0" text="Username" textFill="WHITE" />
+            <Label layoutX="61.0" layoutY="169.0" text="Mot de passe" textFill="WHITE" />
+            <Button fx:id="loginbutton" alignment="CENTER" contentDisplay="CENTER" layoutX="62.0" layoutY="255.0" mnemonicParsing="false" onAction="#handleclick" prefHeight="26.0" prefWidth="239.0" style="-fx-background-color: #C00707;" text="Sign In" textAlignment="CENTER" textFill="WHITE" />
+            <PasswordField fx:id="passwordpasswordfield" layoutX="60.0" layoutY="186.0" prefHeight="26.0" prefWidth="242.0" promptText="Entrer votre mot de passe" style="-fx-border-color: red; -fx-border-radius: 5;" />
+            <Label fx:id="messagefield" alignment="CENTER" layoutX="2.0" layoutY="61.0" prefHeight="18.0" prefWidth="345.0" textFill="RED" />
+            <Label layoutX="129.0" layoutY="301.0" text="admin/admin123" textFill="#d4caca" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

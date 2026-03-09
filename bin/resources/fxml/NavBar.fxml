@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="626.0" prefWidth="182.0" style="-fx-background-color: #C00707;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.NavBarController">
+   <children>
+      <AnchorPane prefHeight="130.0" prefWidth="202.0" style="-fx-border-radius: 30px;">
+         <children>
+            <Label alignment="CENTER" layoutY="38.0" prefHeight="18.0" prefWidth="201.0" text="LOGO" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="534.0" prefWidth="202.0">
+         <children>
+            <Button fx:id="homeButton" alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="10.0" layoutY="44.0" mnemonicParsing="false" onAction="#goHome" prefHeight="30.0" prefWidth="181.0" style="-fx-background-color: red;" text="Home" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="cassetteButton" alignment="TOP_LEFT" layoutX="11.0" layoutY="85.0" mnemonicParsing="false" onAction="#goCassette" prefHeight="30.0" prefWidth="180.0" style="-fx-background-color: red;" text="Cassette" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="locationButton" alignment="TOP_LEFT" layoutX="12.0" layoutY="132.0" mnemonicParsing="false" onAction="#goLocation" prefHeight="30.0" prefWidth="177.0" style="-fx-background-color: red;" text="Location" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="abonneButton" alignment="TOP_LEFT" layoutX="10.0" layoutY="175.0" mnemonicParsing="false" onAction="#goAbonne" prefHeight="30.0" prefWidth="181.0" style="-fx-background-color: red;" text="Abonne" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button alignment="TOP_LEFT" layoutX="10.0" layoutY="489.0" mnemonicParsing="false" onAction="#logout" prefHeight="30.0" prefWidth="181.0" style="-fx-background-color: black;" text="Logout" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
