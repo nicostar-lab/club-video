@@ -12,7 +12,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="626.0" prefWidth="182.0" style="-fx-background-color: #0d1b2a;" stylesheets="@../styles/navbar.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.NavBarController">
+<VBox minWidth="182.0" prefHeight="724.0" prefWidth="182.0" maxWidth="182.0" style="-fx-background-color: #0d1b2a;" stylesheets="@../styles/navbar.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.NavBarController">
    <children>
       <AnchorPane prefHeight="130.0" prefWidth="202.0">
          <children>
@@ -38,7 +38,7 @@
             </Label> -->
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="489.0" prefWidth="182.0">
+      <AnchorPane prefHeight="590.0" prefWidth="182.0">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" height="182.0" layoutX="-81.0" layoutY="267.0" rotate="-45.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="189.0">
                <fill>
@@ -122,7 +122,7 @@
                     </ImageView>
                 </graphic>
             </Button>
-            <Button alignment="TOP_LEFT" contentDisplay="LEFT" graphicTextGap="10.0" layoutX="16.0" layoutY="428.0" mnemonicParsing="false" onAction="#logout" prefHeight="30.0" prefWidth="150.0" styleClass="logout-button" text="Se déconnecter" textFill="WHITE">
+            <Button alignment="TOP_LEFT" contentDisplay="LEFT" graphicTextGap="10.0" layoutX="16.0" layoutY="513.0" mnemonicParsing="false" onAction="#logout" prefHeight="30.0" prefWidth="150.0" styleClass="logout-button" text="Se déconnecter" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>

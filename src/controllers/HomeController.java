@@ -11,7 +11,7 @@ import java.sql.SQLException;
 
 public class HomeController implements BaseController, RouteAwareController {
 
-    private SceneManager sceneManager;
+   
 
     @FXML
     private Label cassettesCountLabel;
@@ -24,7 +24,7 @@ public class HomeController implements BaseController, RouteAwareController {
 
     @Override
     public void setSceneManager(SceneManager sceneManager) {
-        this.sceneManager = sceneManager;
+        
     }
 
     @Override

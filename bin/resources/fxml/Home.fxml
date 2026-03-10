@@ -6,6 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
@@ -69,12 +70,12 @@
                      </stops>
                   </LinearGradient>
                </fill></Rectangle>
-            <Label alignment="CENTER" layoutX="75.0" layoutY="73.0" prefHeight="26.0" prefWidth="382.0" text="Bienvenue sur notre application de gestion de club video" textAlignment="CENTER" textFill="WHITE">
+            <Label alignment="CENTER" layoutX="75.0" layoutY="73.0" prefHeight="26.0" prefWidth="382.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" text="Bienvenue sur notre application de gestion de club video" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Leelawadee UI" size="14.0" />
                </font>
             </Label>
-            <VBox layoutX="68.0" layoutY="140.0" prefHeight="343.0" prefWidth="571.0" spacing="22.0" style="-fx-background-color: rgba(13, 27, 42, 0.92); -fx-background-radius: 26; -fx-border-radius: 26; -fx-border-color: rgba(255, 255, 255, 0.10); -fx-border-width: 1;">
+            <VBox layoutX="68.0" layoutY="140.0" prefHeight="319.0" prefWidth="571.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="68.0" spacing="22.0" style="-fx-background-color: rgba(13, 27, 42, 0.92); -fx-background-radius: 26; -fx-border-radius: 26; -fx-border-color: rgba(255, 255, 255, 0.10); -fx-border-width: 1;">
                <children>
                   <VBox layoutX="0.0" layoutY="0.0" prefWidth="530.0" spacing="6.0" style="-fx-padding: 26 28 0 28;">
                      <children>
@@ -86,27 +87,24 @@
                         <Label style="-fx-text-fill: rgba(255, 255, 255, 0.78); -fx-font-size: 12px;" text="Vue rapide des principaux chiffres du club video." />
                      </children>
                   </VBox>
-                  <HBox prefHeight="229.0" prefWidth="589.0" spacing="18.0" style="-fx-padding: 0 28 28 28;">
+                  <HBox prefHeight="208.0" prefWidth="570.0" spacing="18.0" style="-fx-padding: 0 28 28 28;">
                      <children>
-                        <VBox prefHeight="201.0" prefWidth="158.0" spacing="10.0" style="-fx-background-color: #rgba(19, 31, 47, 0.92); -fx-background-radius: 22; -fx-border-radius: 22; -fx-padding: 18 20 18 20; -fx-border-color: #ffffffd4;">
+                        <VBox HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308" prefHeight="201.0" prefWidth="158.0" spacing="10.0" style="-fx-background-color: rgba(19, 31, 47, 0.92); -fx-background-radius: 22; -fx-border-radius: 22; -fx-padding: 18 20 18 20; -fx-border-color: rgba(255, 255, 255, 0.10);">
                            <children>
-                              <Label style="-fx-text-fill: rgba(255, 255, 255, 0.70); -fx-font-size: 12px; -fx-font-weight: bold;" text="CATALOGUE" />
                               <Label fx:id="cassettesCountLabel" style="-fx-text-fill: white; -fx-font-size: 34px; -fx-font-weight: bold;" text="0" />
                               <Label style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;" text="Cassettes" />
                               <Label style="-fx-text-fill: rgba(255, 255, 255, 0.78); -fx-font-size: 12px;" text="Total disponible dans le catalogue." wrapText="true" />
                            </children>
                         </VBox>
-                        <VBox prefHeight="201.0" prefWidth="159.0" spacing="10.0" style="-fx-background-color: rgba(19, 31, 47, 0.92); -fx-background-radius: 22; -fx-border-radius: 22; -fx-padding: 18 20 18 20; -fx-border-color: #ffffffd4;">
+                        <VBox HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308" prefHeight="201.0" prefWidth="159.0" spacing="10.0" style="-fx-background-color: rgba(19, 31, 47, 0.92); -fx-background-radius: 22; -fx-border-radius: 22; -fx-padding: 18 20 18 20; -fx-border-color: rgba(255, 255, 255, 0.10);">
                            <children>
-                              <Label style="-fx-text-fill: rgba(255, 255, 255, 0.70); -fx-font-size: 12px; -fx-font-weight: bold;" text="MEMBRES" />
                               <Label fx:id="abonnesCountLabel" style="-fx-text-fill: white; -fx-font-size: 34px; -fx-font-weight: bold;" text="0" />
                               <Label style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;" text="Abonnés" />
                               <Label style="-fx-text-fill: rgba(255, 255, 255, 0.78); -fx-font-size: 12px;" text="Nombre de membres enregistrés." wrapText="true" />
                            </children>
                         </VBox>
-                        <VBox prefHeight="201.0" prefWidth="158.0" spacing="10.0" style="-fx-background-color: rgba(19, 31, 47, 0.92); -fx-background-radius: 22; -fx-border-radius: 22; -fx-padding: 18 20 18 20; -fx-border-color: #ffffffd4;">
+                        <VBox HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308" prefHeight="201.0" prefWidth="158.0" spacing="10.0" style="-fx-background-color: rgba(19, 31, 47, 0.92); -fx-background-radius: 22; -fx-border-radius: 22; -fx-padding: 18 20 18 20; -fx-border-color: rgba(255, 255, 255, 0.10);">
                            <children>
-                              <Label style="-fx-text-fill: rgba(255, 255, 255, 0.70); -fx-font-size: 12px; -fx-font-weight: bold;" text="ACTIVITÉ" />
                               <Label fx:id="locationsCountLabel" style="-fx-text-fill: white; -fx-font-size: 34px; -fx-font-weight: bold;" text="0" />
                               <Label style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;" text="En location" />
                               <Label prefHeight="38.0" prefWidth="122.0" style="-fx-text-fill: rgba(255, 255, 255, 0.78); -fx-font-size: 12px;" text="Cassettes &#10;actuellement louées." wrapText="true" />
@@ -116,9 +114,9 @@
                   </HBox>
                </children>
             </VBox>
-            <HBox layoutX="68.0" layoutY="524.0" prefHeight="185.0" prefWidth="651.0" spacing="14.0">
+            <HBox layoutX="68.0" layoutY="508.0" prefHeight="202.0" prefWidth="651.0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="68.0" AnchorPane.bottomAnchor="14.0" spacing="14.0">
                <children>
-                  <VBox alignment="CENTER" prefWidth="146.0" spacing="6.0" style="-fx-background-color: rgba(13,27,42,0.85); -fx-background-radius: 12; -fx-padding: 7;">
+                  <VBox alignment="CENTER" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308" prefWidth="146.0" spacing="6.0" style="-fx-background-color: rgba(13,27,42,0.85); -fx-background-radius: 12; -fx-padding: 7;">
                      <children>
                         <ImageView fitHeight="140.0" fitWidth="130.0" preserveRatio="true">
                            <image><Image url="@../images/terminator2.png" /></image>
@@ -126,7 +124,7 @@
                         <Label style="-fx-text-fill: white; -fx-font-size: 11px; -fx-font-weight: bold;" text="Terminator 2" />
                      </children>
                   </VBox>
-                  <VBox alignment="CENTER" prefWidth="146.0" spacing="6.0" style="-fx-background-color: rgba(13,27,42,0.85); -fx-background-radius: 12; -fx-padding: 7;">
+                  <VBox alignment="CENTER" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308" prefWidth="146.0" spacing="6.0" style="-fx-background-color: rgba(13,27,42,0.85); -fx-background-radius: 12; -fx-padding: 7;">
                      <children>
                         <ImageView fitHeight="140.0" fitWidth="130.0" preserveRatio="true">
                            <image><Image url="@../images/titanic.jpg" /></image>
@@ -134,7 +132,7 @@
                         <Label style="-fx-text-fill: white; -fx-font-size: 11px; -fx-font-weight: bold;" text="Titanic" />
                      </children>
                   </VBox>
-                  <VBox alignment="CENTER" prefWidth="146.0" spacing="6.0" style="-fx-background-color: rgba(13,27,42,0.85); -fx-background-radius: 12; -fx-padding: 7;">
+                  <VBox alignment="CENTER" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308" prefHeight="195.0" prefWidth="146.0" spacing="6.0" style="-fx-background-color: rgba(13,27,42,0.85); -fx-background-radius: 12; -fx-padding: 7;">
                      <children>
                         <ImageView fitHeight="140.0" fitWidth="130.0" preserveRatio="true">
                            <image><Image url="@../images/roi%20lion.jpg" /></image>
@@ -142,7 +140,7 @@
                         <Label style="-fx-text-fill: white; -fx-font-size: 11px; -fx-font-weight: bold;" text="Le Roi Lion" />
                      </children>
                   </VBox>
-                  <VBox alignment="CENTER" prefWidth="146.0" spacing="6.0" style="-fx-background-color: rgba(13,27,42,0.85); -fx-background-radius: 12; -fx-padding: 7;">
+                  <VBox alignment="CENTER" HBox.hgrow="ALWAYS" maxWidth="1.7976931348623157E308" prefWidth="146.0" spacing="6.0" style="-fx-background-color: rgba(13,27,42,0.85); -fx-background-radius: 12; -fx-padding: 7;">
                      <children>
                         <ImageView fitHeight="140.0" fitWidth="130.0" preserveRatio="true">
                            <image><Image url="@../images/matrix.jpg" /></image>
@@ -152,7 +150,7 @@
                   </VBox>
                </children>
             </HBox>
-            <Label layoutX="75.0" layoutY="483.0" prefHeight="35.0" prefWidth="144.0" text="Nouveautés" textFill="WHITE">
+            <Label layoutX="75.0" layoutY="471.0" prefHeight="35.0" prefWidth="144.0" AnchorPane.leftAnchor="75.0" AnchorPane.bottomAnchor="218.0" text="Nouveautés" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>

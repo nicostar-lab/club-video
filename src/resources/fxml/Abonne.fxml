@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -11,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="626.0" prefWidth="846.0" style="-fx-background-color:  #1b263b;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AbonneController">
+<BorderPane prefHeight="724.0" prefWidth="882.0" style="-fx-background-color:  #1b263b;" stylesheets="@../styles/action-buttons.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AbonneController">
     <left>
         <fx:include fx:id="navBar" source="NavBar.fxml" />
     </left>
@@ -25,29 +26,32 @@
                 </Label>
                 
                 <!-- Formulaire -->
-                <VBox layoutX="20.0" layoutY="60.0" prefWidth="620.0" spacing="10.0">
-                    <HBox spacing="10.0">
-                        <TextField fx:id="txtNomAbonne" promptText="Nom" prefWidth="200.0" style="-fx-background-color: white;"/>
-                        <TextField fx:id="txtAdresseAbonne" promptText="Adresse" prefWidth="250.0" style="-fx-background-color: white;"/>
+                <VBox layoutX="20.0" layoutY="84.0" prefHeight="103.0" prefWidth="619.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" spacing="10.0" style="-fx-background-color: rgba(13, 27, 42, 0.92); -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: rgba(255, 255, 255, 0.10);">
+                    <HBox prefHeight="36.0" prefWidth="567.0" spacing="10.0">
+                        <TextField fx:id="txtNomAbonne" prefWidth="200.0" promptText="Nom" style="-fx-background-color: white;" />
+                        <TextField fx:id="txtAdresseAbonne" prefWidth="250.0" promptText="Adresse" style="-fx-background-color: white;" />
                     </HBox>
-                    <HBox spacing="10.0">
-                        <Button text="Ajouter" onAction="#ajouterAbonne" style="-fx-background-color: #C00707; -fx-text-fill: white;" prefWidth="100.0"/>
-                        <Button text="Modifier" onAction="#modifierAbonne" style="-fx-background-color: #C00707; -fx-text-fill: white;" prefWidth="100.0"/>
-                        <Button text="Supprimer" onAction="#supprimerAbonne" style="-fx-background-color: black; -fx-text-fill: white;" prefWidth="100.0"/>
-                        <Button text="Actualiser" onAction="#actualiserTable" style="-fx-background-color: #C00707; -fx-text-fill: white;" prefWidth="100.0"/>
-                        <Button text="Vider" onAction="#viderChamps" style="-fx-background-color: gray; -fx-text-fill: white;" prefWidth="100.0"/>
+                    <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="518.0" spacing="10.0">
+                        <Button onAction="#ajouterAbonne" prefWidth="100.0" styleClass="form-btn,form-btn-primary" text="Ajouter" />
+                        <Button onAction="#modifierAbonne" prefWidth="100.0" styleClass="form-btn,form-btn-primary" text="Modifier" />
+                        <Button onAction="#supprimerAbonne" prefWidth="100.0" styleClass="form-btn,form-btn-danger" text="Supprimer" />
+                        <Button onAction="#actualiserTable" prefWidth="100.0" styleClass="form-btn,form-btn-primary" text="Actualiser" />
+                        <Button onAction="#viderChamps" prefWidth="100.0" styleClass="form-btn,form-btn-muted" text="Vider" />
                     </HBox>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
                 </VBox>
                 
                 <!-- TableView -->
-                <TableView fx:id="tableAbonnes" layoutX="20.0" layoutY="170.0" prefWidth="620.0" prefHeight="430.0" style="-fx-background-color: white;">
+                <TableView fx:id="tableAbonnes" layoutX="20.0" layoutY="205.0" prefHeight="430.0" prefWidth="620.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="205.0" AnchorPane.bottomAnchor="20.0" styleClass="data-table">
                     <columns>
-                        <TableColumn fx:id="colNumAbonne" text="N°" prefWidth="50.0" />
-                        <TableColumn fx:id="colNomAbonne" text="Nom" prefWidth="150.0" />
-                        <TableColumn fx:id="colAdresseAbonne" text="Adresse" prefWidth="150.0" />
-                        <TableColumn fx:id="colDateAbonnement" text="Date Abonnement" prefWidth="120.0" />
-                        <TableColumn fx:id="colDateEntree" text="Date Entrée" prefWidth="120.0" />
-                        <TableColumn fx:id="colNombreLocation" text="Nb Locations" prefWidth="100.0" />
+                        <TableColumn fx:id="colNumAbonne" prefWidth="50.0" text="N°" />
+                        <TableColumn fx:id="colNomAbonne" prefWidth="150.0" text="Nom" />
+                        <TableColumn fx:id="colAdresseAbonne" prefWidth="150.0" text="Adresse" />
+                        <TableColumn fx:id="colDateAbonnement" prefWidth="120.0" text="Date Abonnement" />
+                        <TableColumn fx:id="colDateEntree" prefWidth="120.0" text="Date Entrée" />
+                        <TableColumn fx:id="colNombreLocation" prefWidth="100.0" text="Nb Locations" />
                     </columns>
                 </TableView>
             </children>

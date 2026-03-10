@@ -15,7 +15,7 @@ import java.sql.SQLException;
 
 public class AbonneController implements BaseController, RouteAwareController {
     
-    private SceneManager sceneManager;
+    
     
     @FXML private TextField txtNomAbonne;
     @FXML private TextField txtAdresseAbonne;
@@ -29,7 +29,7 @@ public class AbonneController implements BaseController, RouteAwareController {
     
     @Override
     public void setSceneManager(SceneManager sceneManager) {
-        this.sceneManager = sceneManager;
+       
     }
 
     @Override

@@ -17,7 +17,7 @@ import java.time.LocalDate;
 
 public class CassetteController implements BaseController, RouteAwareController {
     
-    private SceneManager sceneManager;
+   
     
     @FXML private TextField txtTitre;
     @FXML private TextField txtAuteur;
@@ -36,7 +36,7 @@ public class CassetteController implements BaseController, RouteAwareController 
 
     @Override
     public void setSceneManager(SceneManager sceneManager) {
-        this.sceneManager = sceneManager;
+        
     }
 
     @Override

@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../styles/action-buttons.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
    <left>
       <AnchorPane prefHeight="400.0" prefWidth="235.0" style="-fx-background-color: #C40C0C;" BorderPane.alignment="CENTER">
          <children>
@@ -32,7 +32,7 @@
             <TextField fx:id="emailtextfield" layoutX="61.0" layoutY="127.0" prefHeight="26.0" prefWidth="240.0" promptText="Entrer votre username" style="-fx-border-color: red; -fx-border-radius: 5;" />
             <Label layoutX="61.0" layoutY="109.0" text="Username" textFill="WHITE" />
             <Label layoutX="61.0" layoutY="169.0" text="Mot de passe" textFill="WHITE" />
-            <Button fx:id="loginbutton" alignment="CENTER" contentDisplay="CENTER" layoutX="62.0" layoutY="255.0" mnemonicParsing="false" onAction="#handleclick" prefHeight="26.0" prefWidth="239.0" style="-fx-background-color: #C00707;" text="Sign In" textAlignment="CENTER" textFill="WHITE" />
+            <Button fx:id="loginbutton" alignment="CENTER" contentDisplay="CENTER" layoutX="62.0" layoutY="255.0" mnemonicParsing="false" onAction="#handleclick" prefHeight="26.0" prefWidth="239.0" styleClass="login-btn" text="Sign In" textAlignment="CENTER" />
             <PasswordField fx:id="passwordpasswordfield" layoutX="60.0" layoutY="186.0" prefHeight="26.0" prefWidth="242.0" promptText="Entrer votre mot de passe" style="-fx-border-color: red; -fx-border-radius: 5;" />
             <Label fx:id="messagefield" alignment="CENTER" layoutX="2.0" layoutY="61.0" prefHeight="18.0" prefWidth="345.0" textFill="RED" />
             <Label layoutX="129.0" layoutY="301.0" text="admin/admin123" textFill="#d4caca" />
