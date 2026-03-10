@@ -1,23 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="626.0" prefWidth="846.0" style="-fx-background-color: #1B211A;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Scene1Controller">
+<BorderPane prefHeight="626.0" prefWidth="846.0" style="-fx-background-color:  #1b263b;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CassetteController">
     <left>
         <fx:include fx:id="navBar" source="NavBar.fxml" />
     </left>
     <center>
-        <AnchorPane style="-fx-background-color: #1B211A;" BorderPane.alignment="CENTER">
+        <AnchorPane style="-fx-background-color:  #1b263b;" BorderPane.alignment="CENTER">
             <children>
-                <Label layoutX="32.0" layoutY="42.0" text="Page Cassette" textFill="WHITE">
+                <Label layoutX="20.0" layoutY="15.0" text="Gestion des Cassettes" textFill="WHITE">
                     <font>
-                        <Font name="Leelawadee UI Bold" size="26.0" />
+                        <Font name="Leelawadee UI Bold" size="24.0" />
                     </font>
                 </Label>
-                <Label layoutX="32.0" layoutY="93.0" text="Contenu de gestion des cassettes" textFill="WHITE" />
+                
+                <!-- Formulaire -->
+                <VBox layoutX="20.0" layoutY="60.0" prefWidth="620.0" spacing="10.0">
+                    <HBox spacing="10.0">
+                        <TextField fx:id="txtTitre" promptText="Titre" prefWidth="200.0" style="-fx-background-color: white;"/>
+                        <TextField fx:id="txtAuteur" promptText="Auteur" prefWidth="150.0" style="-fx-background-color: white;"/>
+                        <TextField fx:id="txtDuree" promptText="Durée (min)" prefWidth="100.0" style="-fx-background-color: white;"/>
+                    </HBox>
+                    <HBox spacing="10.0">
+                        <TextField fx:id="txtPrix" promptText="Prix" prefWidth="100.0" style="-fx-background-color: white;"/>
+                        <DatePicker fx:id="dateAchat" prefWidth="150.0" style="-fx-background-color: white;"/>
+                        <ComboBox fx:id="cbCategorie" promptText="Sélectionner catégorie" prefWidth="200.0" style="-fx-background-color: white;"/>
+                    </HBox>
+                    <HBox spacing="10.0">
+                        <Button text="Ajouter" onAction="#ajouterCassette" style="-fx-background-color: #C00707; -fx-text-fill: white;" prefWidth="100.0"/>
+                        <Button text="Modifier" onAction="#modifierCassette" style="-fx-background-color: #C00707; -fx-text-fill: white;" prefWidth="100.0"/>
+                        <Button text="Supprimer" onAction="#supprimerCassette" style="-fx-background-color: black; -fx-text-fill: white;" prefWidth="100.0"/>
+                        <Button text="Actualiser" onAction="#actualiserTable" style="-fx-background-color: #C00707; -fx-text-fill: white;" prefWidth="100.0"/>
+                        <Button text="Vider" onAction="#viderChamps" style="-fx-background-color: gray; -fx-text-fill: white;" prefWidth="100.0"/>
+                    </HBox>
+                </VBox>
+                
+                <!-- TableView -->
+                <TableView fx:id="tableCassettes" layoutX="20.0" layoutY="200.0" prefWidth="620.0" prefHeight="400.0" style="-fx-background-color: white;">
+                    <columns>
+                        <TableColumn fx:id="colNumCassette" text="N°" prefWidth="50.0" />
+                        <TableColumn fx:id="colDateAchat" text="Date Achat" prefWidth="100.0" />
+                        <TableColumn fx:id="colTitre" text="Titre" prefWidth="120.0" />
+                        <TableColumn fx:id="colAuteur" text="Auteur" prefWidth="100.0" />
+                        <TableColumn fx:id="colDuree" text="Durée" prefWidth="60.0" />
+                        <TableColumn fx:id="colPrix" text="Prix" prefWidth="60.0" />
+                        <TableColumn fx:id="colLibelleCategorie" text="Catégorie" prefWidth="130.0" />
+                    </columns>
+                </TableView>
             </children>
         </AnchorPane>
     </center>

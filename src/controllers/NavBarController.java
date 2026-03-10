@@ -6,8 +6,7 @@ import javafx.scene.control.Button;
 
 public class NavBarController implements BaseController, RouteAwareController {
 
-    private static final String ACTIVE_STYLE = "-fx-background-color: black;";
-    private static final String INACTIVE_STYLE = "-fx-background-color: red;";
+    private static final String ACTIVE_STYLE_CLASS = "active-nav-button";
 
     private SceneManager sceneManager;
 
@@ -35,17 +34,17 @@ public class NavBarController implements BaseController, RouteAwareController {
 
     @FXML
     private void goCassette(ActionEvent event) {
-        sceneManager.switchScene("Scene1");
+        sceneManager.switchScene("Cassette");
     }
 
     @FXML
     private void goLocation(ActionEvent event) {
-        sceneManager.switchScene("Scene2");
+        sceneManager.switchScene("Location");
     }
 
     @FXML
     private void goAbonne(ActionEvent event) {
-        sceneManager.switchScene("Home");
+        sceneManager.switchScene("Abonne");
     }
 
     @FXML
@@ -58,18 +57,30 @@ public class NavBarController implements BaseController, RouteAwareController {
         setAllInactive();
 
         if ("Home".equals(sceneName)) {
-            homeButton.setStyle(ACTIVE_STYLE);
-        } else if ("Scene1".equals(sceneName)) {
-            cassetteButton.setStyle(ACTIVE_STYLE);
-        } else if ("Scene2".equals(sceneName)) {
-            locationButton.setStyle(ACTIVE_STYLE);
+            setActive(homeButton);
+        } else if ("Cassette".equals(sceneName)) {
+            setActive(cassetteButton);
+        } else if ("Location".equals(sceneName)) {
+            setActive(locationButton);
+        } else if ("Abonne".equals(sceneName)) {
+            setActive(abonneButton);
         }
     }
 
     private void setAllInactive() {
-        homeButton.setStyle(INACTIVE_STYLE);
-        cassetteButton.setStyle(INACTIVE_STYLE);
-        locationButton.setStyle(INACTIVE_STYLE);
-        abonneButton.setStyle(INACTIVE_STYLE);
+        removeActiveStyle(homeButton);
+        removeActiveStyle(cassetteButton);
+        removeActiveStyle(locationButton);
+        removeActiveStyle(abonneButton);
+    }
+
+    private void setActive(Button button) {
+        if (!button.getStyleClass().contains(ACTIVE_STYLE_CLASS)) {
+            button.getStyleClass().add(ACTIVE_STYLE_CLASS);
+        }
+    }
+
+    private void removeActiveStyle(Button button) {
+        button.getStyleClass().remove(ACTIVE_STYLE_CLASS);
     }
 }

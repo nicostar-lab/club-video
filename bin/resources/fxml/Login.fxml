@@ -27,7 +27,7 @@
       </AnchorPane>
    </left>
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="350.0" style="-fx-background-color: #1B211A;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="200.0" prefWidth="350.0" style="-fx-background-color:  #1b263b;" BorderPane.alignment="CENTER">
          <children>
             <TextField fx:id="emailtextfield" layoutX="61.0" layoutY="127.0" prefHeight="26.0" prefWidth="240.0" promptText="Entrer votre username" style="-fx-border-color: red; -fx-border-radius: 5;" />
             <Label layoutX="61.0" layoutY="109.0" text="Username" textFill="WHITE" />

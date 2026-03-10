@@ -1,0 +1,30 @@
+.nav-button {
+  -fx-background-color: #0d1b2a;
+  -fx-text-fill: white;
+}
+
+.nav-button:hover {
+  -fx-background-color: #c00707;
+  -fx-cursor: hand;
+  -fx-transition: all 2s
+}
+
+.active-nav-button {
+  -fx-background-color: #ff00006e;
+  -fx-text-fill: white;
+}
+
+.active-nav-button:hover {
+  -fx-background-color: #ff2f2f;
+  -fx-cursor: hand;
+}
+
+.logout-button {
+  -fx-background-color: black;
+  -fx-text-fill: white;
+}
+
+.logout-button:hover {
+  -fx-background-color: #c00707;
+  -fx-cursor: hand;
+}
